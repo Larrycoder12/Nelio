@@ -204,6 +204,26 @@ export function IconClose({ className }: IconProps) {
   );
 }
 
+export function IconAlert({ className }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      className={className}
+      aria-hidden="true"
+    >
+      <path
+        d="M12 3 21 19H3L12 3Z"
+        stroke="currentColor"
+        strokeWidth="1.75"
+        strokeLinejoin="round"
+      />
+      <path d="M12 9.5v4" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+      <circle cx="12" cy="16.25" r="1" fill="currentColor" />
+    </svg>
+  );
+}
+
 export function IconCircleDot({ className }: IconProps) {
   return (
     <svg

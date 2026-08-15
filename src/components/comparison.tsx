@@ -22,8 +22,8 @@ export function Comparison() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
-            <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-navy-800">
-              <span className="inline-block h-1.5 w-1.5 bg-brand" />
+            <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-moss-800">
+              <span className="inline-block h-1.5 w-1.5 bg-brand-clay" />
               Why not NiceJob or RightResponse
             </p>
             <h2 className="mt-3 font-display text-3xl font-extrabold leading-[1.05] text-ink sm:text-4xl">
@@ -36,13 +36,13 @@ export function Comparison() {
             </p>
           </div>
 
-          <div className="border-t-2 border-navy-900">
+          <div className="border-t-2 border-moss-900">
             {POINTS.map((point) => (
               <div
                 key={point.index}
-                className="grid grid-cols-[3.5rem_1fr] gap-4 border-b-2 border-navy-900 py-6 sm:grid-cols-[4.5rem_1fr] sm:gap-6"
+                className="grid grid-cols-[3.5rem_1fr] gap-4 border-b-2 border-moss-900 py-6 sm:grid-cols-[4.5rem_1fr] sm:gap-6"
               >
-                <span className="font-display text-3xl font-extrabold text-brand sm:text-4xl">
+                <span className="font-display text-3xl font-extrabold text-brand-clay sm:text-4xl">
                   {point.index}
                 </span>
                 <div>

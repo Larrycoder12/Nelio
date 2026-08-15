@@ -3,37 +3,46 @@
 @import "shadcn/tailwind.css";
 
 /*
-  Palette: navy is the dominant working color, safety orange (--color-brand)
-  is the single accent reserved for calls to action and emphasis. Values are
-  tuned so navy-on-paper and paper-on-navy both clear 7:1, and
-  brand-ink-on-brand clears 4.5:1 (verified against WCAG 2.2 AA).
+  Palette: moss (olive/canvas) is the dominant working color, warm khaki
+  (--color-brand) is the single accent reserved for calls to action and
+  emphasis — a workwear canvas-and-brass-hardware direction rather than a
+  safety-orange one. Values are tuned so moss-on-paper and paper-on-moss
+  both clear 7:1, and brand-ink-on-brand clears 4.5:1 (verified against
+  WCAG 2.2 AA). Source palette: #474843 #6b6d59 #ada178 #d7deae #fbf7c1 —
+  #474843 and #6b6d59 anchor moss-900/moss-600, #d7deae and #fbf7c1 anchor
+  moss-200/paper directly. #ada178 sits at L≈0.36 — too mid-tone to clear
+  AA against either the darkest or lightest end of the ramp on its own, so
+  two derivatives carry the accent role instead: --color-brand (lightened,
+  for text/fills on moss-900/950 dark backgrounds) and --color-brand-clay
+  (darkened, for icons/numerals/dots on paper-light backgrounds).
 
   shadcn's own neutral --primary/--secondary/--accent/etc. tokens below are
   remapped to this palette so generated components inherit it automatically
   instead of shadcn's default grayscale theme. Note --accent here is
-  shadcn's generic UI-state hover color, deliberately NOT our brand orange
-  (--color-brand) — keeping them distinct avoids orange flooding every
+  shadcn's generic UI-state hover color, deliberately NOT our brand khaki
+  (--color-brand) — keeping them distinct avoids the accent flooding every
   dropdown/menu hover state, which the brand direction explicitly rules out.
 */
 :root {
-  --color-navy-950: #0a1930;
-  --color-navy-900: #0f2544;
-  --color-navy-800: #16325c;
-  --color-navy-700: #1e3f70;
-  --color-navy-600: #2c5490;
-  --color-navy-400: #7c93b8;
-  --color-navy-200: #c3d0e4;
+  --color-moss-950: #34352e;
+  --color-moss-900: #474843;
+  --color-moss-800: #56574f;
+  --color-moss-700: #656654;
+  --color-moss-600: #6b6d59;
+  --color-moss-400: #a29f7b;
+  --color-moss-200: #d7deae;
 
-  --color-paper: #f5f3ee;
-  --color-paper-dim: #ece7da;
-  --color-paper-line: #d8d1bd;
+  --color-paper: #fbf7c1;
+  --color-paper-dim: #ebecb8;
+  --color-paper-line: #c9c79d;
 
-  --color-brand: #e2590a;
-  --color-brand-dark: #b8480a;
-  --color-brand-ink: #0a1930;
+  --color-brand: #c4bb8e;
+  --color-brand-dark: #ddd6a5;
+  --color-brand-ink: #474843;
+  --color-brand-clay: #7f7960;
 
-  --color-ink: #14213a;
-  --color-ink-muted: #47536b;
+  --color-ink: #474843;
+  --color-ink-muted: #6b6d59;
 
   --color-white: #ffffff;
 
@@ -49,7 +58,7 @@
 
   --popover-foreground: var(--color-ink);
 
-  --primary: var(--color-navy-900);
+  --primary: var(--color-moss-900);
 
   --primary-foreground: #ffffff;
 
@@ -61,9 +70,9 @@
 
   --muted-foreground: var(--color-ink-muted);
 
-  --accent: var(--color-navy-200);
+  --accent: var(--color-moss-200);
 
-  --accent-foreground: var(--color-navy-900);
+  --accent-foreground: var(--color-moss-900);
 
   --destructive: oklch(0.577 0.245 27.325);
 
@@ -79,13 +88,13 @@
 
   --sidebar-foreground: var(--color-ink);
 
-  --sidebar-primary: var(--color-navy-900);
+  --sidebar-primary: var(--color-moss-900);
 
   --sidebar-primary-foreground: #ffffff;
 
-  --sidebar-accent: var(--color-navy-200);
+  --sidebar-accent: var(--color-moss-200);
 
-  --sidebar-accent-foreground: var(--color-navy-900);
+  --sidebar-accent-foreground: var(--color-moss-900);
 
   --sidebar-border: var(--color-paper-line);
 
@@ -93,13 +102,13 @@
 }
 
 @theme inline {
-  --color-navy-950: var(--color-navy-950);
-  --color-navy-900: var(--color-navy-900);
-  --color-navy-800: var(--color-navy-800);
-  --color-navy-700: var(--color-navy-700);
-  --color-navy-600: var(--color-navy-600);
-  --color-navy-400: var(--color-navy-400);
-  --color-navy-200: var(--color-navy-200);
+  --color-moss-950: var(--color-moss-950);
+  --color-moss-900: var(--color-moss-900);
+  --color-moss-800: var(--color-moss-800);
+  --color-moss-700: var(--color-moss-700);
+  --color-moss-600: var(--color-moss-600);
+  --color-moss-400: var(--color-moss-400);
+  --color-moss-200: var(--color-moss-200);
 
   --color-paper: var(--color-paper);
   --color-paper-dim: var(--color-paper-dim);
@@ -108,6 +117,7 @@
   --color-brand: var(--color-brand);
   --color-brand-dark: var(--color-brand-dark);
   --color-brand-ink: var(--color-brand-ink);
+  --color-brand-clay: var(--color-brand-clay);
 
   --color-ink: var(--color-ink);
   --color-ink-muted: var(--color-ink-muted);
@@ -224,6 +234,30 @@ html {
 
 body {
   font-feature-settings: "cv11", "ss01";
+  position: relative;
+}
+
+/*
+  Canvas-grain overlay: a faint fixed noise field over the whole page,
+  the way raw canvas/paper reads under light rather than a flat digital
+  fill. mix-blend-mode lets it read on both the paper and moss sections
+  without per-section tuning. Decorative only — inert to layout and a11y.
+*/
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@media (prefers-reduced-motion: reduce), (prefers-contrast: more) {
+  body::before {
+    display: none;
+  }
 }
 
 ::selection {

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 export default function TermsPage() {
   return (
     <section className="mx-auto max-w-2xl px-5 py-20 sm:px-8 sm:py-28">
-      <p className="text-xs font-bold uppercase tracking-[0.14em] text-brand">
+      <p className="text-xs font-bold uppercase tracking-[0.14em] text-ink-muted">
         Legal
       </p>
       <h1 className="mt-3 font-display text-3xl font-extrabold text-ink sm:text-4xl">
@@ -21,7 +21,7 @@ export default function TermsPage() {
       </p>
       <p className="mt-4 text-base leading-relaxed text-ink-muted">
         Questions in the meantime? Email{" "}
-        <a href="mailto:hello@nelioapp.com" className="font-semibold text-navy-800 underline">
+        <a href="mailto:hello@nelioapp.com" className="font-semibold text-moss-800 underline">
           hello@nelioapp.com
         </a>
         .

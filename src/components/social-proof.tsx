@@ -13,13 +13,13 @@ export function SocialProof() {
     <section className="border-b border-paper-line bg-paper">
       <div
         aria-hidden="true"
-        className="overflow-hidden border-b border-paper-line bg-navy-900 py-3"
+        className="overflow-hidden border-b border-paper-line bg-moss-900 py-3"
       >
         <div className="flex w-max animate-marquee gap-10 motion-reduce:animate-none">
           {[...marqueeItems, ...marqueeItems].map((trade, i) => (
             <span
               key={i}
-              className="text-xs font-bold uppercase tracking-[0.2em] text-navy-400"
+              className="text-xs font-bold uppercase tracking-[0.2em] text-moss-400"
             >
               {trade} <span className="text-brand">·</span>
             </span>
@@ -28,8 +28,8 @@ export function SocialProof() {
       </div>
 
       <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
-        <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-navy-800">
-          <span className="inline-block h-1.5 w-1.5 bg-brand" />
+        <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-moss-800">
+          <span className="inline-block h-1.5 w-1.5 bg-brand-clay" />
           Social proof
         </p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-extrabold leading-[1.05] text-ink sm:text-4xl">
@@ -45,13 +45,13 @@ export function SocialProof() {
           {SLOTS.map((slot) => (
             <div
               key={slot.trade}
-              className="border border-dashed border-navy-400/50 bg-white p-5"
+              className="border border-dashed border-moss-400/50 bg-white p-5"
             >
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold uppercase tracking-wide text-ink-muted">
                   {slot.trade}
                 </span>
-                <span className="border border-brand px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-brand-dark">
+                <span className="border border-moss-600 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-ink">
                   Pilot open
                 </span>
               </div>

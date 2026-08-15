@@ -13,10 +13,10 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: "#0a1930",
+          backgroundColor: "#34352e",
         }}
       >
-        <div style={{ width: 14, height: 14, backgroundColor: "#e2590a" }} />
+        <div style={{ width: 14, height: 14, backgroundColor: "#c4bb8e" }} />
       </div>
     ),
     { ...size },

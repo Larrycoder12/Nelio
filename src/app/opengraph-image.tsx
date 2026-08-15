@@ -14,13 +14,13 @@ export default async function OpengraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          backgroundColor: "#0a1930",
+          backgroundColor: "#34352e",
           padding: "72px",
           fontFamily: "sans-serif",
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-          <div style={{ width: 22, height: 22, backgroundColor: "#e2590a" }} />
+          <div style={{ width: 22, height: 22, backgroundColor: "#c4bb8e" }} />
           <span
             style={{
               fontSize: 40,
@@ -46,7 +46,7 @@ export default async function OpengraphImage() {
           >
             Reviews on autopilot — the moment the job&apos;s done.
           </span>
-          <span style={{ fontSize: 28, color: "#c3d0e4", maxWidth: 820 }}>
+          <span style={{ fontSize: 28, color: "#d7deae", maxWidth: 820 }}>
             Built natively for HVAC and home services. Works with Jobber and
             Housecall Pro.
           </span>

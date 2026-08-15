@@ -16,7 +16,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-navy-700 bg-navy-950">
+    <header className="sticky top-0 z-40 border-b border-moss-700 bg-moss-950">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
         <Link
           href="/"
@@ -31,7 +31,7 @@ export function SiteHeader() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-navy-200 transition-colors hover:text-white"
+              className="text-sm font-medium text-moss-200 transition-colors hover:text-white"
             >
               {link.label}
             </a>
@@ -66,15 +66,15 @@ export function SiteHeader() {
         <nav
           id="mobile-nav"
           aria-label="Primary"
-          className="border-t border-navy-700 bg-navy-950 px-5 pb-6 pt-2 md:hidden"
+          className="border-t border-moss-700 bg-moss-950 px-5 pb-6 pt-2 md:hidden"
         >
           <ul className="flex flex-col">
             {NAV_LINKS.map((link) => (
-              <li key={link.href} className="border-b border-navy-800">
+              <li key={link.href} className="border-b border-moss-800">
                 <a
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="block py-3 text-base font-medium text-navy-200 hover:text-white"
+                  className="block py-3 text-base font-medium text-moss-200 hover:text-white"
                 >
                   {link.label}
                 </a>

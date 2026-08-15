@@ -22,8 +22,8 @@ export function Positioning() {
   return (
     <section className="border-b border-paper-line bg-paper py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-navy-800">
-          <span className="inline-block h-1.5 w-1.5 bg-brand" />
+        <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-moss-800">
+          <span className="inline-block h-1.5 w-1.5 bg-brand-clay" />
           The difference
         </p>
         <h2 className="mt-3 max-w-2xl font-display text-3xl font-extrabold leading-[1.05] text-ink sm:text-4xl">
@@ -35,10 +35,10 @@ export function Positioning() {
           service actually runs.
         </p>
 
-        <div className="mt-10 overflow-hidden border border-navy-900 sm:mt-14">
-          <div className="grid grid-cols-2 divide-x divide-navy-900 bg-navy-900 text-white">
+        <div className="mt-10 overflow-hidden border border-moss-900 sm:mt-14">
+          <div className="grid grid-cols-2 divide-x divide-moss-900 bg-moss-900 text-white">
             <div className="px-5 py-4 sm:px-8">
-              <span className="font-display text-lg font-bold uppercase tracking-wide text-navy-400 sm:text-xl">
+              <span className="font-display text-lg font-bold uppercase tracking-wide text-moss-400 sm:text-xl">
                 Generic review software
               </span>
             </div>
@@ -62,7 +62,7 @@ export function Positioning() {
                   </p>
                 </div>
                 <div className="flex items-start gap-3 bg-white px-5 py-5 sm:px-8">
-                  <IconCheck className="mt-0.5 h-4 w-4 flex-none text-brand" />
+                  <IconCheck className="mt-0.5 h-4 w-4 flex-none text-brand-clay" />
                   <p className="text-sm font-medium leading-relaxed text-ink sm:text-base">
                     {row.nelio}
                   </p>

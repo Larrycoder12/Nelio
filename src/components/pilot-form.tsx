@@ -1,7 +1,7 @@
 "use client";
 
 import { useId, useState, type FormEvent } from "react";
-import { IconArrowRight, IconCheck } from "./icons";
+import { IconAlert, IconArrowRight, IconCheck } from "./icons";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -23,7 +23,7 @@ const FSM_LABELS: Record<string, string> = {
 };
 
 const FIELD_CLASS =
-  "mt-1.5 w-full rounded-none border-navy-900/30 bg-paper text-ink focus-visible:border-navy-900 focus-visible:ring-0";
+  "mt-1.5 w-full rounded-none border-moss-900/30 bg-paper text-ink focus-visible:border-moss-900 focus-visible:ring-0";
 
 export function PilotForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -72,7 +72,7 @@ export function PilotForm() {
     return (
       <div
         role="status"
-        className="flex items-start gap-3 border-2 border-navy-900 bg-white p-6"
+        className="flex items-start gap-3 border-2 border-moss-900 bg-white p-6"
       >
         <span className="flex h-8 w-8 flex-none items-center justify-center bg-brand text-brand-ink">
           <IconCheck className="h-5 w-5" />
@@ -95,7 +95,7 @@ export function PilotForm() {
     <form
       onSubmit={handleSubmit}
       noValidate
-      className="relative border-2 border-navy-900 bg-white p-6 sm:p-7"
+      className="relative border-2 border-moss-900 bg-white p-6 sm:p-7"
     >
       {/* honeypot — hidden from sighted and AT users, bots fill every field */}
       <div className="absolute h-0 w-0 overflow-hidden" aria-hidden="true">
@@ -171,7 +171,8 @@ export function PilotForm() {
       </div>
 
       {status === "error" && (
-        <p role="alert" className="mt-4 text-sm font-medium text-brand-dark">
+        <p role="alert" className="mt-4 flex items-start gap-2 text-sm font-medium text-ink">
+          <IconAlert className="mt-0.5 h-4 w-4 flex-none text-brand-clay" />
           {errorMessage}
         </p>
       )}
