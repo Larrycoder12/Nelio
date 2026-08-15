@@ -13,7 +13,7 @@ const ROWS = [
   },
   {
     label: "Built for",
-    generic: "Any local business — salons, restaurants, retail.",
+    generic: "Any local business: salons, restaurants, retail.",
     nelio: "HVAC, plumbing, and electrical contractors, specifically.",
   },
 ];
@@ -30,9 +30,9 @@ export function Positioning() {
           Built for the trades. Not adapted for them.
         </h2>
         <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-muted sm:text-lg">
-          Most review software is general-purpose — same setup for a nail
-          salon as for an HVAC crew. Nelio is wired directly into how field
-          service actually runs.
+          Most review software is one-size-fits-all: the same setup for a
+          nail salon and an HVAC crew. Nelio runs on your field service
+          software&apos;s actual job-completion event, not a generic form.
         </p>
 
         <div className="mt-10 overflow-hidden border border-moss-900 sm:mt-14">

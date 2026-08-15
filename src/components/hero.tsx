@@ -31,16 +31,18 @@ export function Hero() {
           </p>
 
           <h1 className="mt-4 font-display text-4xl font-extrabold leading-[1.02] text-white sm:text-6xl lg:text-7xl">
-            Reviews on autopilot — the moment the job&apos;s done.
+            The job&apos;s done. The review request is already out.
           </h1>
         </div>
 
         <div className="relative mt-10 grid gap-14 lg:grid-cols-[1fr_0.85fr] lg:items-end lg:gap-10 lg:mt-14">
           <div className="max-w-lg">
             <p className="text-base leading-relaxed text-moss-200 sm:text-lg">
-              The instant a tech marks a job complete in Jobber or Housecall
-              Pro, Nelio sends the review request. Every review that comes
-              back is attributed to the tech and job type that earned it.
+              The moment a tech closes out a job in Jobber or Housecall Pro,
+              Nelio sends the review request: no admin, no spreadsheet, no
+              forgetting. Every review that comes back is tagged to the tech
+              and job type that earned it, so you always know who&apos;s
+              driving your rating.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">

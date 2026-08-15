@@ -37,8 +37,8 @@ export function SocialProof() {
         </h2>
         <p className="mt-4 max-w-xl text-base leading-relaxed text-ink-muted sm:text-lg">
           Nelio is in early pilot with HVAC and home-service contractors on
-          Jobber and Housecall Pro. Real results and reviews will show up
-          here as pilot contractors go live.
+          Jobber and Housecall Pro. Real results and reviews land here as
+          pilot contractors go live. Be one of the first names on this page.
         </p>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-3">

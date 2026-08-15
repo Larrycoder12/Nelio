@@ -15,9 +15,9 @@ export function PilotOffer() {
               30 days, free. A process guarantee, not a star-rating one.
             </h2>
             <p className="mt-4 max-w-lg text-base leading-relaxed text-moss-200 sm:text-lg">
-              We&apos;ll send a review request for every completed job,
-              automatically, for 30 days — free. That&apos;s the guarantee:
-              volume and process, not stars.
+              We send a review request for every completed job,
+              automatically, for 30 days. Free. That&apos;s the guarantee:
+              volume and process, not star ratings.
             </p>
 
             <div className="mt-8 border border-dashed border-moss-600 bg-moss-900 p-6">
@@ -28,10 +28,10 @@ export function PilotOffer() {
                     No review gating. Ever.
                   </p>
                   <p className="mt-1.5 text-sm leading-relaxed text-moss-200">
-                    Every completed job gets a request — Nelio never filters
-                    or delays requests based on an expected star rating.
-                    It&apos;s a compliance line we don&apos;t cross, not a
-                    marketing claim.
+                    Every completed job gets a request. Nelio never filters
+                    or delays a request based on an expected star rating.
+                    That&apos;s a compliance line, not a marketing claim, and
+                    we don&apos;t cross it.
                   </p>
                 </div>
               </div>

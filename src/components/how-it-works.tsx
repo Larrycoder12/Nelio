@@ -7,21 +7,21 @@ const STEPS = [
     icon: IconWrench,
     title: "Job marked complete",
     description:
-      "A tech closes out the job in Jobber or Housecall Pro — the same step they already take every day.",
+      "A tech closes out the job in Jobber or Housecall Pro. It's the same step they already take every day, so there's nothing new to train.",
   },
   {
     index: "02",
     icon: IconMessage,
     title: "Request sent automatically",
     description:
-      "Nelio fires an SMS or email review request within minutes. No manual follow-up, no spreadsheet of who to text.",
+      "Nelio sends an SMS or email review request within minutes, automatically. No follow-up list, no one has to remember.",
   },
   {
     index: "03",
     icon: IconTag,
     title: "Review attributed to the tech",
     description:
-      "The review comes back tagged to the specific tech and job type — so you know exactly who earned it.",
+      "The review comes back tagged to the tech and job type that earned it. You know exactly who's driving your rating, and who needs coaching.",
   },
 ];
 

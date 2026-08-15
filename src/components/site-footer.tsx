@@ -16,7 +16,7 @@ export function SiteFooter() {
               Nelio
             </Link>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-moss-400">
-              Review requests that fire the moment the job&apos;s done — built
+              Review requests that fire the moment the job&apos;s done. Built
               for HVAC and home services.
             </p>
           </div>

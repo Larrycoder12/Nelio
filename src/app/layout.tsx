@@ -24,11 +24,11 @@ const siteUrl = "https://nelioapp.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Nelio — Review Requests That Fire the Moment the Job's Done",
-    template: "%s — Nelio",
+    default: "Nelio: Review Requests That Fire the Moment the Job's Done",
+    template: "%s | Nelio",
   },
   description:
-    "Nelio is review-management software built natively for HVAC, plumbing, and electrical contractors. Connect Jobber or Housecall Pro and every completed job automatically triggers a review request, attributed to the tech who earned it.",
+    "Nelio is review management software built for HVAC, plumbing, and electrical contractors. Connect Jobber or Housecall Pro and every completed job automatically triggers a review request, attributed to the tech who earned it.",
   keywords: [
     "HVAC review software",
     "home services review management",
@@ -42,16 +42,16 @@ export const metadata: Metadata = {
     type: "website",
     url: siteUrl,
     siteName: "Nelio",
-    title: "Reviews on Autopilot — the Moment the Job's Done",
+    title: "The Job's Done. The Review Request Is Already Out.",
     description:
-      "Built natively for HVAC and home services. Review requests fire automatically from Jobber or Housecall Pro, attributed to the tech who earned them.",
+      "Built for HVAC and home services. Review requests fire automatically from Jobber or Housecall Pro, attributed to the tech who earned them.",
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Reviews on Autopilot — the Moment the Job's Done",
+    title: "The Job's Done. The Review Request Is Already Out.",
     description:
-      "Built natively for HVAC and home services. Review requests fire automatically from Jobber or Housecall Pro, attributed to the tech who earned them.",
+      "Built for HVAC and home services. Review requests fire automatically from Jobber or Housecall Pro, attributed to the tech who earned them.",
     images: ["/opengraph-image"],
   },
   robots: {

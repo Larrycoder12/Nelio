@@ -1,18 +1,18 @@
 const POINTS = [
   {
     index: "01",
-    title: "Native FSM integration, not a bolt-on",
-    body: "Nelio is wired directly into Jobber's and Housecall Pro's job-completion events — the trigger fires from the source of truth in your field service software, not a generic webhook workaround.",
+    title: "Built into Jobber and Housecall Pro, not bolted on",
+    body: "Nelio reads the job-completion event straight from Jobber and Housecall Pro. The trigger comes from your actual job records, not a workaround built on a generic webhook that breaks the moment the software updates its API.",
   },
   {
     index: "02",
     title: "Attribution goes to the tech, not just the business",
-    body: "Most review tools stop at the business level. Nelio tags every review to the tech and job type that earned it, so you can see who's earning five stars — and who needs coaching.",
+    body: "Most review tools stop at the business level. Nelio tags every review to the tech and job type that earned it, so you see exactly who's earning five stars, and who needs coaching before a bad review costs you a customer.",
   },
   {
     index: "03",
-    title: "Built for the trades, not retrofitted from local-business software",
-    body: "Copy, timing, and job types are modeled around HVAC, plumbing, and electrical work — not adapted from a template built for coffee shops and nail salons.",
+    title: "Built for the trades, not retrofitted from salon software",
+    body: "The message copy, send timing, and job types are all modeled on HVAC, plumbing, and electrical work. None of it was adapted from a template built for coffee shops and nail salons.",
   },
 ];
 
@@ -31,8 +31,8 @@ export function Comparison() {
             </h2>
             <p className="mt-4 text-base leading-relaxed text-ink-muted sm:text-lg">
               NiceJob and RightResponse work fine for a general local
-              business. Here&apos;s specifically what changes when review
-              software is built around field service instead.
+              business. Here&apos;s what&apos;s different when the software
+              is built around field service instead.
             </p>
           </div>
 
