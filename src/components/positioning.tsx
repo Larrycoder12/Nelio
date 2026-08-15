@@ -23,7 +23,7 @@ export function Positioning() {
     <section className="border-b border-paper-line bg-paper py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-navy-800">
-          <span className="inline-block h-1.5 w-1.5 bg-accent" />
+          <span className="inline-block h-1.5 w-1.5 bg-brand" />
           The difference
         </p>
         <h2 className="mt-3 max-w-2xl font-display text-3xl font-extrabold leading-[1.05] text-ink sm:text-4xl">
@@ -42,8 +42,8 @@ export function Positioning() {
                 Generic review software
               </span>
             </div>
-            <div className="bg-accent px-5 py-4 sm:px-8">
-              <span className="font-display text-lg font-bold uppercase tracking-wide text-accent-ink sm:text-xl">
+            <div className="bg-brand px-5 py-4 sm:px-8">
+              <span className="font-display text-lg font-bold uppercase tracking-wide text-brand-ink sm:text-xl">
                 Nelio
               </span>
             </div>
@@ -62,7 +62,7 @@ export function Positioning() {
                   </p>
                 </div>
                 <div className="flex items-start gap-3 bg-white px-5 py-5 sm:px-8">
-                  <IconCheck className="mt-0.5 h-4 w-4 flex-none text-accent" />
+                  <IconCheck className="mt-0.5 h-4 w-4 flex-none text-brand" />
                   <p className="text-sm font-medium leading-relaxed text-ink sm:text-base">
                     {row.nelio}
                   </p>

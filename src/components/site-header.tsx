@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { IconClose, IconMenu } from "./icons";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
   { href: "#how-it-works", label: "How it works" },
@@ -20,7 +22,7 @@ export function SiteHeader() {
           href="/"
           className="flex items-center gap-2 font-display text-2xl font-bold uppercase tracking-tight text-white"
         >
-          <span className="inline-block h-2.5 w-2.5 bg-accent" aria-hidden="true" />
+          <span className="inline-block h-2.5 w-2.5 bg-brand" aria-hidden="true" />
           Nelio
         </Link>
 
@@ -39,7 +41,10 @@ export function SiteHeader() {
         <div className="hidden md:block">
           <a
             href="#pilot"
-            className="inline-flex items-center bg-accent px-4 py-2 text-sm font-semibold text-accent-ink transition-colors hover:bg-accent-dark"
+            className={cn(
+              buttonVariants({ variant: "brand" }),
+              "h-auto px-4 py-2 text-sm font-semibold normal-case tracking-normal",
+            )}
           >
             Start free pilot
           </a>
@@ -79,7 +84,10 @@ export function SiteHeader() {
           <a
             href="#pilot"
             onClick={() => setOpen(false)}
-            className="mt-4 flex items-center justify-center bg-accent px-4 py-3 text-sm font-semibold text-accent-ink"
+            className={cn(
+              buttonVariants({ variant: "brand" }),
+              "mt-4 h-auto px-4 py-3 text-sm font-semibold normal-case tracking-normal",
+            )}
           >
             Start free pilot
           </a>

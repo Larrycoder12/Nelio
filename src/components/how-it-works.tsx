@@ -44,8 +44,8 @@ export function HowItWorks() {
   return (
     <section id="how-it-works" className="border-b border-navy-800 bg-navy-950 py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-accent">
-          <span className="inline-block h-1.5 w-1.5 bg-accent" />
+        <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-brand">
+          <span className="inline-block h-1.5 w-1.5 bg-brand" />
           How it works
         </p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-extrabold leading-[1.05] text-white sm:text-4xl">
@@ -56,10 +56,10 @@ export function HowItWorks() {
           {STEPS.map((step, i) => (
             <Fragment key={step.title}>
               <div className="border-2 border-navy-700 bg-navy-900 md:flex-1">
-                <div className="h-1 bg-accent" />
+                <div className="h-1 bg-brand" />
                 <div className="p-6 sm:p-7">
                   <div className="flex items-start justify-between">
-                    <span className="font-display text-3xl font-extrabold text-accent">
+                    <span className="font-display text-3xl font-extrabold text-brand">
                       {step.index}
                     </span>
                     <span className="flex h-10 w-10 items-center justify-center border border-navy-600 text-navy-200">

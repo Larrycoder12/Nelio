@@ -12,7 +12,7 @@ export function SiteFooter() {
               href="/"
               className="flex items-center gap-2 font-display text-2xl font-bold uppercase tracking-tight text-white"
             >
-              <span className="inline-block h-2.5 w-2.5 bg-accent" aria-hidden="true" />
+              <span className="inline-block h-2.5 w-2.5 bg-brand" aria-hidden="true" />
               Nelio
             </Link>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-navy-400">

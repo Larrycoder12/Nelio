@@ -21,7 +21,7 @@ export function SocialProof() {
               key={i}
               className="text-xs font-bold uppercase tracking-[0.2em] text-navy-400"
             >
-              {trade} <span className="text-accent">·</span>
+              {trade} <span className="text-brand">·</span>
             </span>
           ))}
         </div>
@@ -29,7 +29,7 @@ export function SocialProof() {
 
       <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
         <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-navy-800">
-          <span className="inline-block h-1.5 w-1.5 bg-accent" />
+          <span className="inline-block h-1.5 w-1.5 bg-brand" />
           Social proof
         </p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-extrabold leading-[1.05] text-ink sm:text-4xl">
@@ -51,7 +51,7 @@ export function SocialProof() {
                 <span className="text-xs font-bold uppercase tracking-wide text-ink-muted">
                   {slot.trade}
                 </span>
-                <span className="border border-accent px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-accent-dark">
+                <span className="border border-brand px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-brand-dark">
                   Pilot open
                 </span>
               </div>

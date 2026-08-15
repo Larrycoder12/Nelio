@@ -23,7 +23,7 @@ export function Comparison() {
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
             <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-navy-800">
-              <span className="inline-block h-1.5 w-1.5 bg-accent" />
+              <span className="inline-block h-1.5 w-1.5 bg-brand" />
               Why not NiceJob or RightResponse
             </p>
             <h2 className="mt-3 font-display text-3xl font-extrabold leading-[1.05] text-ink sm:text-4xl">
@@ -42,7 +42,7 @@ export function Comparison() {
                 key={point.index}
                 className="grid grid-cols-[3.5rem_1fr] gap-4 border-b-2 border-navy-900 py-6 sm:grid-cols-[4.5rem_1fr] sm:gap-6"
               >
-                <span className="font-display text-3xl font-extrabold text-accent sm:text-4xl">
+                <span className="font-display text-3xl font-extrabold text-brand sm:text-4xl">
                   {point.index}
                 </span>
                 <div>

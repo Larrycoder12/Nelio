@@ -7,8 +7,8 @@ export function PilotOffer() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="grid gap-10 lg:grid-cols-[1fr_0.9fr] lg:gap-16">
           <div>
-            <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-accent">
-              <span className="inline-block h-1.5 w-1.5 bg-accent" />
+            <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-brand">
+              <span className="inline-block h-1.5 w-1.5 bg-brand" />
               The pilot offer
             </p>
             <h2 className="mt-3 font-display text-3xl font-extrabold leading-[1.05] text-white sm:text-4xl">
@@ -22,7 +22,7 @@ export function PilotOffer() {
 
             <div className="mt-8 border border-dashed border-navy-600 bg-navy-900 p-6">
               <div className="flex items-start gap-3">
-                <IconShield className="mt-0.5 h-6 w-6 flex-none text-accent" />
+                <IconShield className="mt-0.5 h-6 w-6 flex-none text-brand" />
                 <div>
                   <p className="font-display text-lg font-bold text-white">
                     No review gating. Ever.

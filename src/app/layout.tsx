@@ -3,6 +3,7 @@ import { Barlow, Barlow_Condensed } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { cn } from "@/lib/utils";
 
 const barlowCondensed = Barlow_Condensed({
   variable: "--font-display",
@@ -63,12 +64,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${barlowCondensed.variable} ${barlow.variable} h-full`}
+      className={cn("h-full", barlowCondensed.variable, barlow.variable)}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink font-body antialiased">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-3 focus:left-3 focus:rounded-sm focus:bg-accent focus:px-4 focus:py-2 focus:text-accent-ink focus:font-semibold"
+          className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-3 focus:left-3 focus:rounded-sm focus:bg-brand focus:px-4 focus:py-2 focus:text-brand-ink focus:font-semibold"
         >
           Skip to content
         </a>

@@ -2,12 +2,33 @@
 
 import { useId, useState, type FormEvent } from "react";
 import { IconArrowRight, IconCheck } from "./icons";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 type Status = "idle" | "submitting" | "success" | "error";
+
+const FSM_LABELS: Record<string, string> = {
+  jobber: "Jobber",
+  "housecall-pro": "Housecall Pro",
+  other: "Something else",
+  none: "Not using one yet",
+};
+
+const FIELD_CLASS =
+  "mt-1.5 w-full rounded-none border-navy-900/30 bg-paper text-ink focus-visible:border-navy-900 focus-visible:ring-0";
 
 export function PilotForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [fsm, setFsm] = useState("jobber");
   const formId = useId();
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -40,6 +61,7 @@ export function PilotForm() {
 
       setStatus("success");
       form.reset();
+      setFsm("jobber");
     } catch {
       setStatus("error");
       setErrorMessage("Something went wrong. Please check your connection and try again.");
@@ -52,7 +74,7 @@ export function PilotForm() {
         role="status"
         className="flex items-start gap-3 border-2 border-navy-900 bg-white p-6"
       >
-        <span className="flex h-8 w-8 flex-none items-center justify-center bg-accent text-accent-ink">
+        <span className="flex h-8 w-8 flex-none items-center justify-center bg-brand text-brand-ink">
           <IconCheck className="h-5 w-5" />
         </span>
         <div>
@@ -77,8 +99,8 @@ export function PilotForm() {
     >
       {/* honeypot — hidden from sighted and AT users, bots fill every field */}
       <div className="absolute h-0 w-0 overflow-hidden" aria-hidden="true">
-        <label htmlFor={`${formId}-website`}>Leave this field blank</label>
-        <input
+        <Label htmlFor={`${formId}-website`}>Leave this field blank</Label>
+        <Input
           id={`${formId}-website`}
           name="website"
           type="text"
@@ -89,75 +111,80 @@ export function PilotForm() {
 
       <div className="space-y-4">
         <div>
-          <label
+          <Label
             htmlFor={`${formId}-businessName`}
-            className="block text-xs font-bold uppercase tracking-wide text-ink"
+            className="text-xs font-bold uppercase tracking-wide text-ink"
           >
             Business name
-          </label>
-          <input
+          </Label>
+          <Input
             id={`${formId}-businessName`}
             name="businessName"
             type="text"
             required
             maxLength={200}
             autoComplete="organization"
-            className="mt-1.5 w-full border border-navy-900/30 bg-paper px-3 py-2.5 text-sm text-ink outline-none focus:border-navy-900"
+            className={FIELD_CLASS}
           />
         </div>
 
         <div>
-          <label
+          <Label
             htmlFor={`${formId}-email`}
-            className="block text-xs font-bold uppercase tracking-wide text-ink"
+            className="text-xs font-bold uppercase tracking-wide text-ink"
           >
             Work email
-          </label>
-          <input
+          </Label>
+          <Input
             id={`${formId}-email`}
             name="email"
             type="email"
             required
             autoComplete="email"
-            className="mt-1.5 w-full border border-navy-900/30 bg-paper px-3 py-2.5 text-sm text-ink outline-none focus:border-navy-900"
+            className={FIELD_CLASS}
           />
         </div>
 
         <div>
-          <label
+          <Label
             htmlFor={`${formId}-fsm`}
-            className="block text-xs font-bold uppercase tracking-wide text-ink"
+            className="text-xs font-bold uppercase tracking-wide text-ink"
           >
             Field service software
-          </label>
-          <select
-            id={`${formId}-fsm`}
+          </Label>
+          <Select
             name="fsm"
-            defaultValue="jobber"
-            className="mt-1.5 w-full border border-navy-900/30 bg-paper px-3 py-2.5 text-sm text-ink outline-none focus:border-navy-900"
+            value={fsm}
+            onValueChange={(value) => setFsm(value ?? "jobber")}
           >
-            <option value="jobber">Jobber</option>
-            <option value="housecall-pro">Housecall Pro</option>
-            <option value="other">Something else</option>
-            <option value="none">Not using one yet</option>
-          </select>
+            <SelectTrigger id={`${formId}-fsm`} className={`${FIELD_CLASS} w-full`}>
+              <SelectValue>{(value: string) => FSM_LABELS[value] ?? value}</SelectValue>
+            </SelectTrigger>
+            <SelectContent className="rounded-none">
+              <SelectItem value="jobber">Jobber</SelectItem>
+              <SelectItem value="housecall-pro">Housecall Pro</SelectItem>
+              <SelectItem value="other">Something else</SelectItem>
+              <SelectItem value="none">Not using one yet</SelectItem>
+            </SelectContent>
+          </Select>
         </div>
       </div>
 
       {status === "error" && (
-        <p role="alert" className="mt-4 text-sm font-medium text-accent-dark">
+        <p role="alert" className="mt-4 text-sm font-medium text-brand-dark">
           {errorMessage}
         </p>
       )}
 
-      <button
+      <Button
         type="submit"
+        variant="brand"
         disabled={status === "submitting"}
-        className="mt-6 flex w-full items-center justify-center gap-2 bg-accent px-6 py-3.5 text-sm font-bold uppercase tracking-wide text-accent-ink transition-colors hover:bg-accent-dark disabled:cursor-not-allowed disabled:opacity-60"
+        className="mt-6 h-auto w-full py-3.5 text-sm"
       >
         {status === "submitting" ? "Starting your pilot…" : "Start my free pilot"}
         {status !== "submitting" && <IconArrowRight className="h-4 w-4" />}
-      </button>
+      </Button>
 
       <p className="mt-3 text-xs leading-relaxed text-ink-muted">
         No credit card. No contract. Cancel any time during the pilot.

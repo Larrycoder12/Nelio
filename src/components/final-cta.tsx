@@ -1,4 +1,6 @@
 import { IconArrowRight } from "./icons";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 export function FinalCta() {
   return (
@@ -14,7 +16,7 @@ export function FinalCta() {
         <div className="mt-8">
           <a
             href="#pilot"
-            className="inline-flex items-center justify-center gap-2 bg-accent px-7 py-4 text-sm font-bold uppercase tracking-wide text-accent-ink transition-colors hover:bg-accent-dark"
+            className={cn(buttonVariants({ variant: "brand" }), "h-auto gap-2 px-7 py-4 text-sm")}
           >
             Start your free 30-day pilot
             <IconArrowRight className="h-4 w-4" />

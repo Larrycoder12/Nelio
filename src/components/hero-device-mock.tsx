@@ -49,7 +49,7 @@ export function HeroDeviceMock() {
           </div>
 
           <div className="max-w-[90%] rounded-md rounded-tl-sm border border-navy-700 bg-white p-3">
-            <div className="flex items-center gap-1 text-accent">
+            <div className="flex items-center gap-1 text-brand">
               {Array.from({ length: 5 }).map((_, i) => (
                 <IconStar key={i} className="h-3 w-3" />
               ))}
@@ -57,7 +57,7 @@ export function HeroDeviceMock() {
             <p className="mt-1 text-[11px] font-semibold text-ink">
               Rate your service
             </p>
-            <span className="mt-2 inline-block bg-accent px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-accent-ink">
+            <span className="mt-2 inline-block bg-brand px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-brand-ink">
               Leave a review
             </span>
           </div>
@@ -65,8 +65,8 @@ export function HeroDeviceMock() {
       </div>
 
       {/* attribution tag */}
-      <div className="relative z-20 mt-3 ml-auto w-fit -translate-x-2 border border-accent bg-navy-950 px-3 py-1.5 sm:-translate-x-4">
-        <span className="text-[10px] font-bold uppercase tracking-wide text-accent">
+      <div className="relative z-20 mt-3 ml-auto w-fit -translate-x-2 border border-brand bg-navy-950 px-3 py-1.5 sm:-translate-x-4">
+        <span className="text-[10px] font-bold uppercase tracking-wide text-brand">
           Attributed → Mike A. · AC Repair
         </span>
       </div>
