@@ -27,7 +27,7 @@ export function Positioning() {
           The difference
         </p>
         <h2 className="mt-3 max-w-2xl font-display text-3xl font-extrabold leading-[1.05] text-ink sm:text-4xl">
-          Built for the trades. Not adapted for them.
+          Built for the trades, from the ground up.
         </h2>
         <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-muted sm:text-lg">
           Most review software is one-size-fits-all: the same setup for a

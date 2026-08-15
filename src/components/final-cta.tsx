@@ -10,15 +10,15 @@ export function FinalCta() {
           Stop chasing reviews manually.
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-moss-200 sm:text-lg">
-          Connect Jobber or Housecall Pro and start your free 30-day pilot
-          today. No credit card, no contract.
+          Join the waitlist now and be first in line for a free 30-day pilot
+          when Nelio launches. No credit card, no contract.
         </p>
         <div className="mt-8">
           <a
-            href="#pilot"
+            href="#waitlist"
             className={cn(buttonVariants({ variant: "brand" }), "h-auto gap-2 px-7 py-4 text-sm")}
           >
-            Start your free 30-day pilot
+            Join the waitlist
             <IconArrowRight className="h-4 w-4" />
           </a>
         </div>

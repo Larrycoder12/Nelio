@@ -1,18 +1,18 @@
 const POINTS = [
   {
     index: "01",
-    title: "Built into Jobber and Housecall Pro, not bolted on",
-    body: "Nelio reads the job-completion event straight from Jobber and Housecall Pro. The trigger comes from your actual job records, not a workaround built on a generic webhook that breaks the moment the software updates its API.",
+    title: "Fires from the job record itself",
+    body: "A job marked complete in Jobber or Housecall Pro is the trigger — no delayed sync, no webhook workaround to maintain every time either platform updates.",
   },
   {
     index: "02",
-    title: "Attribution goes to the tech, not just the business",
-    body: "Most review tools stop at the business level. Nelio tags every review to the tech and job type that earned it, so you see exactly who's earning five stars, and who needs coaching before a bad review costs you a customer.",
+    title: "Attribution reaches the tech",
+    body: "Every review gets tagged to the specific tech and job type that earned it, so you can see who's driving your rating and who needs coaching.",
   },
   {
     index: "03",
-    title: "Built for the trades, not retrofitted from salon software",
-    body: "The message copy, send timing, and job types are all modeled on HVAC, plumbing, and electrical work. None of it was adapted from a template built for coffee shops and nail salons.",
+    title: "Copy and timing built around the trades",
+    body: "Message copy, send timing, and job types are modeled on how HVAC, plumbing, and electrical crews actually work, not lifted from a template built for salons and coffee shops.",
   },
 ];
 
@@ -24,15 +24,15 @@ export function Comparison() {
           <div>
             <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-moss-800">
               <span className="inline-block h-1.5 w-1.5 bg-brand-clay" />
-              Why not NiceJob or RightResponse
+              Versus NiceJob &amp; RightResponse
             </p>
             <h2 className="mt-3 font-display text-3xl font-extrabold leading-[1.05] text-ink sm:text-4xl">
-              Good tools for any local business. Not built for yours.
+              They&apos;re general-purpose review tools. Nelio speaks field service.
             </h2>
             <p className="mt-4 text-base leading-relaxed text-ink-muted sm:text-lg">
-              NiceJob and RightResponse work fine for a general local
-              business. Here&apos;s what&apos;s different when the software
-              is built around field service instead.
+              NiceJob and RightResponse serve any local business well. Here&apos;s
+              what changes when the software is built around HVAC, plumbing,
+              and electrical work specifically.
             </p>
           </div>
 

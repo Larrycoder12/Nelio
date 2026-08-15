@@ -42,14 +42,14 @@ export const metadata: Metadata = {
     type: "website",
     url: siteUrl,
     siteName: "Nelio",
-    title: "The Job's Done. The Review Request Is Already Out.",
+    title: "The Job's Done. The Review Is Already In.",
     description:
       "Built for HVAC and home services. Review requests fire automatically from Jobber or Housecall Pro, attributed to the tech who earned them.",
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Job's Done. The Review Request Is Already Out.",
+    title: "The Job's Done. The Review Is Already In.",
     description:
       "Built for HVAC and home services. Review requests fire automatically from Jobber or Housecall Pro, attributed to the tech who earned them.",
     images: ["/opengraph-image"],

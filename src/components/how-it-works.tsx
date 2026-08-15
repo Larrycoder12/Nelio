@@ -6,22 +6,19 @@ const STEPS = [
     index: "01",
     icon: IconWrench,
     title: "Job marked complete",
-    description:
-      "A tech closes out the job in Jobber or Housecall Pro. It's the same step they already take every day, so there's nothing new to train.",
+    description: "A tech closes out the job in Jobber or Housecall Pro.",
   },
   {
     index: "02",
     icon: IconMessage,
     title: "Request sent automatically",
-    description:
-      "Nelio sends an SMS or email review request within minutes, automatically. No follow-up list, no one has to remember.",
+    description: "Nelio texts or emails a review request within minutes.",
   },
   {
     index: "03",
     icon: IconTag,
     title: "Review attributed to the tech",
-    description:
-      "The review comes back tagged to the tech and job type that earned it. You know exactly who's driving your rating, and who needs coaching.",
+    description: "The review comes back tagged to the tech who earned it.",
   },
 ];
 
@@ -50,7 +47,7 @@ export function HowItWorks() {
           How it works
         </p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-extrabold leading-[1.05] text-white sm:text-4xl">
-          One trigger. No extra steps for your techs.
+          One trigger, and no extra steps for your techs.
         </h2>
 
         <div className="mt-12 flex flex-col md:flex-row md:items-stretch">

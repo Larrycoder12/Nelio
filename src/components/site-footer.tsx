@@ -37,8 +37,8 @@ export function SiteFooter() {
                 </a>
               </li>
               <li>
-                <a href="#pilot" className="text-moss-200 hover:text-white">
-                  The pilot
+                <a href="#waitlist" className="text-moss-200 hover:text-white">
+                  Waitlist
                 </a>
               </li>
             </ul>

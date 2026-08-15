@@ -64,10 +64,10 @@ export async function POST(request: Request) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Nelio Pilot <pilot@nelioapp.com>",
+        from: "Nelio Waitlist <pilot@nelioapp.com>",
         to: [notifyEmail],
         reply_to: email,
-        subject: `New pilot signup: ${businessName}`,
+        subject: `New waitlist signup: ${businessName}`,
         html: `<p><strong>Business:</strong> ${escapeHtml(businessName)}</p>
 <p><strong>Email:</strong> ${escapeHtml(email)}</p>
 <p><strong>Field service tool:</strong> ${escapeHtml(fsm || "unspecified")}</p>`,

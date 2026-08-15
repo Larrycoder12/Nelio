@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Nelio: the job's done, the review request is already out";
+export const alt = "Nelio: the job's done, the review is already in";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -44,7 +44,7 @@ export default async function OpengraphImage() {
               maxWidth: 980,
             }}
           >
-            The job&apos;s done. The review request is already out.
+            The job&apos;s done. The review is already in.
           </span>
           <span style={{ fontSize: 28, color: "#d7deae", maxWidth: 820 }}>
             Built natively for HVAC and home services. Works with Jobber and

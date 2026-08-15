@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 const NAV_LINKS = [
   { href: "#how-it-works", label: "How it works" },
   { href: "#why-nelio", label: "Why Nelio" },
-  { href: "#pilot", label: "The pilot" },
+  { href: "#waitlist", label: "Waitlist" },
 ];
 
 export function SiteHeader() {
@@ -40,13 +40,13 @@ export function SiteHeader() {
 
         <div className="hidden md:block">
           <a
-            href="#pilot"
+            href="#waitlist"
             className={cn(
               buttonVariants({ variant: "brand" }),
               "h-auto px-4 py-2 text-sm font-semibold normal-case tracking-normal",
             )}
           >
-            Start free pilot
+            Join waitlist
           </a>
         </div>
 
@@ -82,14 +82,14 @@ export function SiteHeader() {
             ))}
           </ul>
           <a
-            href="#pilot"
+            href="#waitlist"
             onClick={() => setOpen(false)}
             className={cn(
               buttonVariants({ variant: "brand" }),
               "mt-4 h-auto px-4 py-3 text-sm font-semibold normal-case tracking-normal",
             )}
           >
-            Start free pilot
+            Join waitlist
           </a>
         </nav>
       )}

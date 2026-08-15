@@ -33,12 +33,13 @@ export function SocialProof() {
           Social proof
         </p>
         <h2 className="mt-3 max-w-xl font-display text-3xl font-extrabold leading-[1.05] text-ink sm:text-4xl">
-          Join the first pilot contractors.
+          Be one of the first names on this page.
         </h2>
         <p className="mt-4 max-w-xl text-base leading-relaxed text-ink-muted sm:text-lg">
-          Nelio is in early pilot with HVAC and home-service contractors on
-          Jobber and Housecall Pro. Real results and reviews land here as
-          pilot contractors go live. Be one of the first names on this page.
+          Nelio hasn&apos;t launched yet. Join the waitlist now and you&apos;ll
+          be one of the first HVAC, plumbing, and electrical contractors we
+          bring on when we do — real results and reviews will show up here
+          as pilot contractors go live.
         </p>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-3">
@@ -52,7 +53,7 @@ export function SocialProof() {
                   {slot.trade}
                 </span>
                 <span className="border border-moss-600 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-ink">
-                  Pilot open
+                  Waitlist open
                 </span>
               </div>
               <div className="mt-5 space-y-2" aria-hidden="true">
@@ -61,7 +62,7 @@ export function SocialProof() {
                 <div className="h-2 w-3/5 bg-paper-line" />
               </div>
               <p className="mt-5 text-xs text-ink-muted">
-                Reserved for a pilot contractor
+                Reserved for a waitlisted contractor
               </p>
             </div>
           ))}

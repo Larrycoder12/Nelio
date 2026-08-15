@@ -31,26 +31,24 @@ export function Hero() {
           </p>
 
           <h1 className="mt-4 font-display text-4xl font-extrabold leading-[1.02] text-white sm:text-6xl lg:text-7xl">
-            The job&apos;s done. The review request is already out.
+            The job&apos;s done. The review is already in.
           </h1>
         </div>
 
         <div className="relative mt-10 grid gap-14 lg:grid-cols-[1fr_0.85fr] lg:items-end lg:gap-10 lg:mt-14">
           <div className="max-w-lg">
             <p className="text-base leading-relaxed text-moss-200 sm:text-lg">
-              The moment a tech closes out a job in Jobber or Housecall Pro,
-              Nelio sends the review request: no admin, no spreadsheet, no
-              forgetting. Every review that comes back is tagged to the tech
-              and job type that earned it, so you always know who&apos;s
-              driving your rating.
+              Nelio sends the review request the moment a tech closes out a
+              job in Jobber or Housecall Pro, and attributes every review
+              that comes back to the tech who earned it.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
-                href="#pilot"
+                href="#waitlist"
                 className={cn(buttonVariants({ variant: "brand" }), "h-auto gap-2 px-6 py-3.5 text-sm")}
               >
-                Start your free 30-day pilot
+                Join the waitlist
                 <IconArrowRight className="h-4 w-4" />
               </a>
               <a
@@ -83,10 +81,10 @@ export function Hero() {
               className="pointer-events-none absolute -left-8 bottom-16 z-30 hidden w-32 -rotate-6 border-2 border-dashed border-brand/70 bg-moss-950 px-3 py-2 text-center lg:block"
             >
               <span className="block font-display text-[11px] font-bold uppercase tracking-widest text-brand">
-                30-day pilot
+                Waitlist open
               </span>
               <span className="mt-0.5 block text-[9px] font-semibold uppercase tracking-wide text-moss-200">
-                No card required
+                Free 30-day pilot
               </span>
             </div>
           </div>

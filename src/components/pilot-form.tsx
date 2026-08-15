@@ -82,9 +82,9 @@ export function PilotForm() {
             You&apos;re on the list.
           </p>
           <p className="mt-1 text-sm leading-relaxed text-ink-muted">
-            We&apos;ll reach out within one business day to connect your
-            Jobber or Housecall Pro account and get your 30-day pilot
-            running.
+            We&apos;ll email you the moment Nelio is ready — you&apos;ll be
+            first in line to connect your Jobber or Housecall Pro account and
+            start your free 30-day pilot.
           </p>
         </div>
       </div>
@@ -183,12 +183,12 @@ export function PilotForm() {
         disabled={status === "submitting"}
         className="mt-6 h-auto w-full py-3.5 text-sm"
       >
-        {status === "submitting" ? "Starting your pilot…" : "Start my free pilot"}
+        {status === "submitting" ? "Joining the waitlist…" : "Join the waitlist"}
         {status !== "submitting" && <IconArrowRight className="h-4 w-4" />}
       </Button>
 
       <p className="mt-3 text-xs leading-relaxed text-ink-muted">
-        No credit card. No contract. Cancel any time during the pilot.
+        No credit card. No spam. Just an email when your free pilot is ready.
       </p>
     </form>
   );

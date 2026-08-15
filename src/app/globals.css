@@ -216,6 +216,13 @@
 html {
   color-scheme: light;
   scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* legacy Edge/IE */
+}
+
+/* scrollbar hidden entirely — scrolling still works, no visible track/thumb */
+::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Chromium Edge */
 }
 
 @media (prefers-reduced-motion: reduce) {
