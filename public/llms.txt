@@ -1,0 +1,20 @@
+# Nelio
+
+> Nelio is review management software built for HVAC, plumbing, and electrical contractors. It connects to Jobber or Housecall Pro so every completed job automatically triggers a review request, attributed to the specific tech who earned it.
+
+Nelio has not launched yet and is currently taking waitlist signups for a free 30-day pilot. No credit card is required.
+
+## Key facts
+
+- Trigger: fires the moment a job is marked complete in Jobber or Housecall Pro — no manual sending, no delayed sync.
+- Attribution: every review is tagged to the tech and job type that earned it.
+- Built specifically for HVAC, plumbing, and electrical contractors, not general-purpose local businesses.
+- Integrates with: Jobber, Housecall Pro.
+- Pricing: free 30-day pilot, no credit card required.
+- Contact: hello@nelioapp.com
+
+## Pages
+
+- [Homepage](https://nelioapp.com/): product overview, how it works, waitlist signup.
+- [Privacy Policy](https://nelioapp.com/privacy)
+- [Terms of Service](https://nelioapp.com/terms)

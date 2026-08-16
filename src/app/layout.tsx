@@ -38,6 +38,9 @@ export const metadata: Metadata = {
     "review request automation",
   ],
   authors: [{ name: "Nelio" }],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     url: siteUrl,
@@ -60,6 +63,44 @@ export const metadata: Metadata = {
   },
 };
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: "Nelio",
+      url: siteUrl,
+      logo: `${siteUrl}/icon`,
+      email: "hello@nelioapp.com",
+      description:
+        "Nelio is review management software built for HVAC, plumbing, and electrical contractors.",
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      name: "Nelio",
+      url: siteUrl,
+      publisher: { "@id": `${siteUrl}/#organization` },
+    },
+    {
+      "@type": "SoftwareApplication",
+      name: "Nelio",
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Web",
+      description:
+        "Review management software that fires review requests automatically the moment a job is marked complete in Jobber or Housecall Pro, attributed to the tech who earned it.",
+      url: siteUrl,
+      offers: {
+        "@type": "Offer",
+        description: "Free 30-day pilot",
+        price: "0",
+        priceCurrency: "USD",
+      },
+    },
+  ],
+};
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
@@ -67,6 +108,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={cn("h-full", barlowCondensed.variable, barlow.variable)}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink font-body antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-3 focus:left-3 focus:rounded-sm focus:bg-brand focus:px-4 focus:py-2 focus:text-brand-ink focus:font-semibold"
