@@ -126,6 +126,7 @@
 
   --font-display: var(--font-display), "Arial Narrow", sans-serif;
   --font-body: var(--font-body), system-ui, sans-serif;
+  --font-mono: var(--font-mono), "IBM Plex Mono", ui-monospace, monospace;
 
   /* type scale — condensed display font reads bigger than it measures,
      sizes are tuned down slightly from a generic scale to compensate */
@@ -291,6 +292,17 @@ body::before {
 /* condensed display type: tight tracking, uppercase where used */
 .font-display {
   letter-spacing: -0.01em;
+}
+
+/*
+  Graph-paper dot texture — used sparingly as a backdrop patch behind a
+  hero illustration or callout, never as a full-page background. Dot
+  color is set via currentColor so it can be tuned per-section (e.g.
+  text-moss-700 on paper, text-moss-200/30 on moss-950).
+*/
+.bg-dot-grid {
+  background-image: radial-gradient(currentColor 1.5px, transparent 1.5px);
+  background-size: 18px 18px;
 }
 /*
   ---break---

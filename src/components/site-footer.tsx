@@ -22,7 +22,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-[0.14em] text-moss-400">
+            <h3 className="font-mono text-xs font-semibold uppercase tracking-[0.14em] text-moss-400">
               Product
             </h3>
             <ul className="mt-4 space-y-2.5 text-sm">
@@ -45,7 +45,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-[0.14em] text-moss-400">
+            <h3 className="font-mono text-xs font-semibold uppercase tracking-[0.14em] text-moss-400">
               Company
             </h3>
             <ul className="mt-4 space-y-2.5 text-sm">

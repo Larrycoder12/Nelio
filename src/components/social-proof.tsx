@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utils";
+
 const TRADES = ["HVAC", "PLUMBING", "ELECTRICAL"];
 
 const SLOTS = [
@@ -28,7 +30,7 @@ export function SocialProof() {
       </div>
 
       <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24">
-        <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-moss-800">
+        <p className="flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.14em] text-moss-800">
           <span className="inline-block h-1.5 w-1.5 bg-brand-clay" />
           Social proof
         </p>
@@ -38,32 +40,42 @@ export function SocialProof() {
         <p className="mt-4 max-w-xl text-base leading-relaxed text-ink-muted sm:text-lg">
           Nelio hasn&apos;t launched yet. Join the waitlist now and you&apos;ll
           be one of the first HVAC, plumbing, and electrical contractors we
-          bring on when we do — real results and reviews will show up here
+          bring on when we do. Real results and reviews will show up here
           as pilot contractors go live.
         </p>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-3">
-          {SLOTS.map((slot) => (
+        <div className="mt-10 border-2 border-dashed border-moss-400/60 bg-white shadow-[6px_6px_0_0_rgba(71,72,67,0.2)] sm:mt-14">
+          <div className="flex items-center justify-between gap-4 border-b border-dashed border-moss-400/60 px-5 py-2.5 sm:px-6">
+            <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-ink-muted">
+              Trade roster
+            </span>
+            <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-ink-muted">
+              Status
+            </span>
+          </div>
+          {SLOTS.map((slot, i) => (
             <div
               key={slot.trade}
-              className="border border-dashed border-moss-400/50 bg-white p-5"
+              className={cn(
+                "flex flex-col gap-3 px-5 py-5 sm:flex-row sm:items-center sm:gap-6 sm:px-6",
+                i > 0 && "border-t border-dashed border-moss-400/60",
+              )}
             >
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-bold uppercase tracking-wide text-ink-muted">
-                  {slot.trade}
-                </span>
-                <span className="border border-moss-600 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-ink">
-                  Waitlist open
-                </span>
-              </div>
-              <div className="mt-5 space-y-2" aria-hidden="true">
+              <span className="font-display text-lg font-bold uppercase tracking-wide text-ink sm:w-40 sm:flex-none">
+                {slot.trade}
+              </span>
+              <div className="flex-1 space-y-2" aria-hidden="true">
                 <div className="h-2 w-full bg-paper-line" />
                 <div className="h-2 w-4/5 bg-paper-line" />
-                <div className="h-2 w-3/5 bg-paper-line" />
               </div>
-              <p className="mt-5 text-xs text-ink-muted">
-                Reserved for a waitlisted contractor
-              </p>
+              <div className="flex items-center justify-between gap-3 sm:flex-none sm:justify-end sm:gap-6">
+                <p className="text-xs text-ink-muted">
+                  Reserved for a waitlisted contractor
+                </p>
+                <span className="flex-none border border-moss-600 px-2 py-0.5 font-mono text-[10px] font-semibold uppercase tracking-wide text-ink">
+                  Open
+                </span>
+              </div>
             </div>
           ))}
         </div>

@@ -1,5 +1,5 @@
-import { Fragment } from "react";
-import { IconArrowRight, IconMessage, IconTag, IconWrench } from "./icons";
+import { cn } from "@/lib/utils";
+import { IconMessage, IconTag, IconWrench } from "./icons";
 
 const STEPS = [
   {
@@ -22,27 +22,11 @@ const STEPS = [
   },
 ];
 
-/* stitched-seam connector — canvas/workwear detail tying the timeline to the palette */
-function Connector() {
-  return (
-    <div
-      aria-hidden="true"
-      className="flex items-center justify-center py-1 md:flex-1 md:py-0"
-    >
-      <div className="relative h-10 w-0 border-l-2 border-dashed border-brand/50 md:h-0 md:w-full md:min-w-8 md:border-l-0 md:border-t-2">
-        <span className="absolute left-1/2 top-1/2 flex h-6 w-6 -translate-x-1/2 -translate-y-1/2 rotate-90 items-center justify-center bg-paper text-moss-600 md:rotate-0">
-          <IconArrowRight className="h-4 w-4" />
-        </span>
-      </div>
-    </div>
-  );
-}
-
 export function HowItWorks() {
   return (
     <section id="how-it-works" className="border-b border-moss-800 bg-moss-950 py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-brand">
+        <p className="flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.14em] text-brand">
           <span className="inline-block h-1.5 w-1.5 bg-brand" />
           How it works
         </p>
@@ -50,31 +34,33 @@ export function HowItWorks() {
           One trigger, and no extra steps for your techs.
         </h2>
 
-        <div className="mt-12 flex flex-col md:flex-row md:items-stretch">
-          {STEPS.map((step, i) => (
-            <Fragment key={step.title}>
-              <div className="border-2 border-moss-700 bg-moss-900 md:flex-1">
-                <div className="h-1 bg-brand" />
-                <div className="p-6 sm:p-7">
-                  <div className="flex items-start justify-between">
-                    <span className="font-display text-3xl font-extrabold text-brand">
-                      {step.index}
-                    </span>
-                    <span className="flex h-10 w-10 items-center justify-center border border-moss-600 text-moss-200">
-                      <step.icon className="h-5 w-5" />
-                    </span>
-                  </div>
-                  <h3 className="mt-4 font-display text-xl font-bold text-white">
-                    {step.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-moss-200 sm:text-base">
-                    {step.description}
-                  </p>
+        <div className="mt-12 border-2 border-moss-700 bg-moss-900 shadow-[7px_7px_0_0_rgba(0,0,0,0.3)]">
+          <div className="h-1 bg-brand" />
+          <div className="flex flex-col md:flex-row">
+            {STEPS.map((step, i) => (
+              <div
+                key={step.title}
+                className={cn(
+                  "flex-1 p-6 sm:p-7",
+                  i > 0 && "border-t-2 border-moss-700 md:border-t-0 md:border-l-2",
+                )}
+              >
+                <div className="flex items-center gap-3">
+                  <span className="font-mono text-sm font-semibold text-brand">
+                    {step.index}
+                  </span>
+                  <span aria-hidden="true" className="h-px flex-1 bg-moss-700" />
+                  <step.icon className="h-5 w-5 flex-none text-moss-200" />
                 </div>
+                <h3 className="mt-4 font-display text-xl font-bold text-white">
+                  {step.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-moss-200 sm:text-base">
+                  {step.description}
+                </p>
               </div>
-              {i < STEPS.length - 1 && <Connector />}
-            </Fragment>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

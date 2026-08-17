@@ -11,12 +11,19 @@ export function HeroDeviceMock() {
       aria-hidden="true"
       className="relative mx-auto w-full max-w-sm select-none pt-6 pb-10 sm:max-w-md"
     >
-      {/* dispatch ticket, peeking out top-left */}
-      <div className="absolute -top-2 left-0 z-10 w-56 -rotate-6 border border-paper-line bg-paper px-4 py-3 shadow-[6px_6px_0_0_rgba(71,72,67,0.35)] sm:left-2">
+      {/* dispatch ticket, peeking out top-left, framed like an app window */}
+      <div className="absolute -top-2 left-0 z-10 w-56 -rotate-6 border-2 border-moss-900 bg-paper px-4 py-3 shadow-[7px_7px_0_0_rgba(71,72,67,0.4)] sm:left-2">
         <div className="flex items-center justify-between border-b border-dashed border-paper-line pb-2">
-          <span className="font-display text-xs font-bold uppercase tracking-wide text-ink">
-            Job #4412
-          </span>
+          <div className="flex items-center gap-2">
+            <span className="flex gap-1" aria-hidden="true">
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-clay/60" />
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-clay/60" />
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-clay/60" />
+            </span>
+            <span className="font-display text-xs font-bold uppercase tracking-wide text-ink">
+              Job #4412
+            </span>
+          </div>
           <span className="bg-moss-900 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">
             Complete
           </span>
@@ -65,8 +72,8 @@ export function HeroDeviceMock() {
       </div>
 
       {/* attribution tag */}
-      <div className="relative z-20 mt-3 ml-auto w-fit -translate-x-2 border border-brand bg-moss-950 px-3 py-1.5 sm:-translate-x-4">
-        <span className="text-[10px] font-bold uppercase tracking-wide text-brand">
+      <div className="relative z-20 mt-3 ml-auto w-fit -translate-x-2 border-2 border-brand bg-moss-950 px-3 py-1.5 sm:-translate-x-4">
+        <span className="font-mono text-[10px] font-semibold uppercase tracking-wide text-brand">
           Attributed → Mike A. · AC Repair
         </span>
       </div>
