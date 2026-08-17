@@ -237,3 +237,92 @@ export function IconCircleDot({ className }: IconProps) {
     </svg>
   );
 }
+
+/*
+  Doodle set — a second, deliberately looser icon family used only as
+  small marginalia (an annotation pointing at a headline, a scribble
+  circling a stat). Round caps and slightly irregular bezier paths read
+  as pen-drawn; kept separate from the structural square-joint set above
+  so the two don't get mixed into the same UI role.
+*/
+
+export function IconDoodleArrow({ className }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 60 44"
+      fill="none"
+      className={className}
+      aria-hidden="true"
+    >
+      <path
+        d="M3 34C13 30 19 22 24 15C28.5 8.8 31.5 5.5 34 4"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+      <path
+        d="M22 5.5C26.5 4.3 30.5 3.8 34.5 4.2C35.3 8 35.6 11.8 35.2 16"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function IconDoodleUnderline({ className }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 130 16"
+      fill="none"
+      className={className}
+      preserveAspectRatio="none"
+      aria-hidden="true"
+    >
+      <path
+        d="M2 11C21 4 32 13.5 49 7C66 0.5 79 12 97 6.5C110 2.6 118 8 128 5"
+        stroke="currentColor"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+export function IconDoodleCircle({ className }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 60 44"
+      fill="none"
+      className={className}
+      preserveAspectRatio="none"
+      aria-hidden="true"
+    >
+      <path
+        d="M39 5C50 8 57 17 54 26C51 35.5 38 41 25 39.5C12.5 38 2.5 30 4 20.5C5.5 11 17 3.5 29 4.3"
+        stroke="currentColor"
+        strokeWidth="2.25"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+export function IconDoodleBurst({ className }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      className={className}
+      aria-hidden="true"
+    >
+      <path
+        d="M12 2.5V9.5M12 14.5V21.5M4 6L9 10.5M15 13.5L20 18M2.5 12H9M15 12H21.5M4 18L9 13.5M15 10.5L20 6"
+        stroke="currentColor"
+        strokeWidth="1.9"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}

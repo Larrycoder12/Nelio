@@ -7,7 +7,7 @@ export function PilotOffer() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="grid gap-10 lg:grid-cols-[1fr_0.9fr] lg:gap-16">
           <div>
-            <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-brand">
+            <p className="flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.14em] text-brand">
               <span className="inline-block h-1.5 w-1.5 bg-brand" />
               Join the waitlist
             </p>
@@ -21,7 +21,7 @@ export function PilotOffer() {
               from day one.
             </p>
 
-            <div className="mt-8 border border-dashed border-moss-600 bg-moss-900 p-6">
+            <div className="mt-8 border-2 border-dashed border-moss-600 bg-moss-900 p-6">
               <div className="flex items-start gap-3">
                 <IconShield className="mt-0.5 h-6 w-6 flex-none text-brand" />
                 <div>
@@ -29,7 +29,7 @@ export function PilotOffer() {
                     Nelio will never gate reviews.
                   </p>
                   <p className="mt-1.5 text-sm leading-relaxed text-moss-200">
-                    Every completed job gets a request — Nelio won&apos;t
+                    Every completed job gets a request. Nelio won&apos;t
                     filter or delay one based on an expected star rating.
                     That&apos;s the compliance standard we&apos;re building to.
                   </p>

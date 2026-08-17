@@ -72,7 +72,7 @@ export function PilotForm() {
     return (
       <div
         role="status"
-        className="flex items-start gap-3 border-2 border-moss-900 bg-white p-6"
+        className="flex items-start gap-3 border-2 border-moss-900 bg-white p-6 shadow-[8px_8px_0_0_rgba(71,72,67,0.3)]"
       >
         <span className="flex h-8 w-8 flex-none items-center justify-center bg-brand text-brand-ink">
           <IconCheck className="h-5 w-5" />
@@ -82,7 +82,7 @@ export function PilotForm() {
             You&apos;re on the list.
           </p>
           <p className="mt-1 text-sm leading-relaxed text-ink-muted">
-            We&apos;ll email you the moment Nelio is ready — you&apos;ll be
+            We&apos;ll email you the moment Nelio is ready, and you&apos;ll be
             first in line to connect your Jobber or Housecall Pro account and
             start your free 30-day pilot.
           </p>
@@ -95,7 +95,7 @@ export function PilotForm() {
     <form
       onSubmit={handleSubmit}
       noValidate
-      className="relative border-2 border-moss-900 bg-white p-6 sm:p-7"
+      className="relative border-2 border-moss-900 bg-white p-6 shadow-[8px_8px_0_0_rgba(71,72,67,0.3)] sm:p-7"
     >
       {/* honeypot — hidden from sighted and AT users, bots fill every field */}
       <div className="absolute h-0 w-0 overflow-hidden" aria-hidden="true">
@@ -113,7 +113,7 @@ export function PilotForm() {
         <div>
           <Label
             htmlFor={`${formId}-businessName`}
-            className="text-xs font-bold uppercase tracking-wide text-ink"
+            className="font-mono text-xs font-semibold uppercase tracking-wide text-ink"
           >
             Business name
           </Label>
@@ -131,7 +131,7 @@ export function PilotForm() {
         <div>
           <Label
             htmlFor={`${formId}-email`}
-            className="text-xs font-bold uppercase tracking-wide text-ink"
+            className="font-mono text-xs font-semibold uppercase tracking-wide text-ink"
           >
             Work email
           </Label>
@@ -148,7 +148,7 @@ export function PilotForm() {
         <div>
           <Label
             htmlFor={`${formId}-fsm`}
-            className="text-xs font-bold uppercase tracking-wide text-ink"
+            className="font-mono text-xs font-semibold uppercase tracking-wide text-ink"
           >
             Field service software
           </Label>

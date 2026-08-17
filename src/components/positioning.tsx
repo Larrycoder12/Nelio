@@ -16,13 +16,18 @@ const ROWS = [
     generic: "Any local business: salons, restaurants, retail.",
     nelio: "HVAC, plumbing, and electrical contractors, specifically.",
   },
+  {
+    label: "Gating",
+    generic: "Some tools quietly filter or delay requests based on expected rating.",
+    nelio: "Every completed job gets a request. Nelio never filters or delays one.",
+  },
 ];
 
 export function Positioning() {
   return (
     <section className="border-b border-paper-line bg-paper py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-moss-800">
+        <p className="flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.14em] text-moss-800">
           <span className="inline-block h-1.5 w-1.5 bg-brand-clay" />
           The difference
         </p>
@@ -35,7 +40,7 @@ export function Positioning() {
           software&apos;s actual job-completion event, not a generic form.
         </p>
 
-        <div className="mt-10 overflow-hidden border border-moss-900 sm:mt-14">
+        <div className="mt-10 overflow-hidden border-2 border-moss-900 shadow-[7px_7px_0_0_rgba(71,72,67,0.3)] sm:mt-14">
           <div className="grid grid-cols-2 divide-x divide-moss-900 bg-moss-900 text-white">
             <div className="px-5 py-4 sm:px-8">
               <span className="font-display text-lg font-bold uppercase tracking-wide text-moss-400 sm:text-xl">
@@ -51,7 +56,7 @@ export function Positioning() {
 
           {ROWS.map((row, i) => (
             <div key={row.label} className={i > 0 ? "border-t border-paper-line" : ""}>
-              <span className="block bg-paper px-5 pt-4 text-[11px] font-bold uppercase tracking-[0.14em] text-ink-muted sm:px-8">
+              <span className="block bg-paper px-5 pt-4 font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-ink-muted sm:px-8">
                 {row.label}
               </span>
               <div className="grid grid-cols-2 divide-x divide-paper-line">

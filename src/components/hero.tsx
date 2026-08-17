@@ -1,5 +1,5 @@
 import { HeroDeviceMock } from "./hero-device-mock";
-import { IconArrowRight } from "./icons";
+import { IconArrowRight, IconDoodleArrow, IconDoodleUnderline } from "./icons";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -25,13 +25,18 @@ export function Hero() {
 
       <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-14 sm:px-8 sm:pb-20 sm:pt-20 lg:pb-24 lg:pt-24">
         <div className="max-w-3xl">
-          <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-brand">
+          <p className="flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.14em] text-brand">
             <span className="inline-block h-1.5 w-1.5 bg-brand" />
             Built for HVAC &amp; home services
           </p>
 
           <h1 className="mt-4 font-display text-4xl font-extrabold leading-[1.02] text-white sm:text-6xl lg:text-7xl">
-            The job&apos;s done. The review is already in.
+            The job&apos;s done. The review is{" "}
+            <span className="relative inline-block">
+              already in
+              <IconDoodleUnderline className="pointer-events-none absolute -bottom-1.5 left-0 h-3 w-full text-brand sm:-bottom-2.5 sm:h-4" />
+            </span>
+            .
           </h1>
         </div>
 
@@ -73,6 +78,12 @@ export function Hero() {
           </div>
 
           <div className="relative">
+            {/* graph-paper backdrop patch, tucked behind the mock's top-right corner */}
+            <div
+              aria-hidden="true"
+              className="bg-dot-grid pointer-events-none absolute -top-8 -right-6 hidden h-36 w-36 text-moss-700/70 sm:block"
+            />
+
             <HeroDeviceMock />
 
             {/* rotated stamp, pinned across the seam between the two columns */}
@@ -87,6 +98,12 @@ export function Hero() {
                 Free 30-day pilot
               </span>
             </div>
+
+            {/* doodle arrow, curling from the stamp toward the phone's CTA */}
+            <IconDoodleArrow
+              aria-hidden="true"
+              className="pointer-events-none absolute -left-2 bottom-6 z-30 hidden h-9 w-14 -rotate-[100deg] text-brand lg:block"
+            />
           </div>
         </div>
       </div>
